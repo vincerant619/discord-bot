@@ -14,7 +14,8 @@ IDE that's installed in your device */
 const { token } = require("./config.json")
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}`)
+  console.log(`Client logged in as ${client.user.tag}`)
+  client.user.setActivity(`with ${client.guilds.cache.size}`)
 })
 
 client.login(token)
